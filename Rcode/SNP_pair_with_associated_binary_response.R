@@ -47,16 +47,16 @@ set.seed(100)
 #consider the following:
 
 #genotype combinations (or cells in multinomial distribution):
-geno = c("AA-GG", "AA-GA", "AA-AA", "AG-GG", "AG-GA", "AG-AA", "GG-GG", "GG-GA", "GG-AA")  
+geno = c("GG-AA", "GG-AG", "GG-GG", "GA-AA", "GA-AG", "GA-GG", "AA-AA", "AA-AG", "AA-GG")  
 
 #sample size in real data
-sample_size = 19981 
+sample_size = 18000 
 
 #proportion in each genotype combination (or cell probabilities):
-prob = c(4321, 7041, 3159, 1383, 2364, 1110, 133, 194, 96)/sample_size 
+prob = c(3641, 3864, 1075, 3242, 3485, 954, 736, 770, 233)/sample_size 
 
 #proportion of y=1 in each cell:
-prop_y = c(0.21, 0.22, 0.27, 0.22, 0.23, 0.23, 0.23, 0.23, 0.18)
+prop_y = c(0.22, 0.22, 0.19, 0.26, 0.22, 0.21, 0.26, 0.21, 0.21)
 
 df = sim_true_snp(snp1_name="SNP1", snp2_name="SNP2", sam_size = sample_size, size=1, geno=geno, prob=prob, prop_y=prop_y)
                   

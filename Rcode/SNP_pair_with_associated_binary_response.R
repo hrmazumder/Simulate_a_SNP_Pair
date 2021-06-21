@@ -61,3 +61,10 @@ prop_y = c(0.22, 0.22, 0.19, 0.26, 0.22, 0.21, 0.26, 0.21, 0.21)
 df = sim_true_snp(snp1_name="SNP1", snp2_name="SNP2", sam_size = sample_size, size=1, geno=geno, prob=prob, prop_y=prop_y)
                   
 head(df)
+     response SNP1 SNP2
+3753         0   GG   AG
+5843         0   GG   AG
+3947         0   GG   AG
+10921        0   GA   AA
+3605         0   GG   AA
+10153        0   GA   AA

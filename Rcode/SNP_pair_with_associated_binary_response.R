@@ -1,5 +1,5 @@
 
-#' Generate a simulated SNP data with a SNP pair and associated binary response (e.g., disease status) based on "real SNP data". 
+#' Generate a simulated SNP data (a SNP pair and associated binary outcome such as disease status) based on "real SNP data". 
 #' This simulation considers 3 genotypes for each SNP. 
 #'
 #' @parameter snp1_name: provide SNP1 name you want to see in the simulated data

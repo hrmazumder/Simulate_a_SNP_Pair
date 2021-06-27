@@ -5,8 +5,8 @@ The binary response (or disease status) is under each genotype combination  is s
 
 
 An example of a SNP data:
-
- response SNP1 SNP2
+```
+ Outcome SNP1 SNP2
         1   GA   AG
         1   GG   AG
         0   GA   AA
@@ -17,4 +17,5 @@ An example of a SNP data:
         1   GG   AA
         1   GA   AG
         1   GG   GG
+```
         

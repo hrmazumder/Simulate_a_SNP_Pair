@@ -10,6 +10,7 @@ An example of a SNP data:
         1   GA   AG
         1   GG   AG
         0   GA   AA
+        
         .    .    .
         .    .    .
         .    .    .

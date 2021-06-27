@@ -1,14 +1,15 @@
 
-#' Generate a simulated SNP data with a SNP pair and associated binary response (e.g., disease status) based on "real SNP data".
+#' Generate a simulated SNP data with a SNP pair and associated binary response (e.g., disease status) based on "real SNP data". 
+#' This simulation considers 3 genotypes for each SNP. 
 #'
 #' @parameter snp1_name: provide SNP1 name you want to see in the simulated data
 #' @parameter snp2_name: provide SNP2 name you want to see in the simulated data
 #' @parameter sam_size: sample size of the real data (also sample size of the simulated data)
 #' @parameter size the: total number of objects that are put into cells in the typical multinomial experiment.
                         #if size=1 in rnultinom(), it will return 0s and one 1 which is indicator of the cell is occured/picked up as result. 
-#' @parameter geno: combination of genotypes of SNP1 and SNP2, call "cells" in a Multinomial distribution. This simulation considers 3 genotypes for each SNP. 
+#' @parameter geno: a vector of combination of genotypes of SNP1 and SNP2, call "cells" in a Multinomial distribution. for example, AA-AT, AA-AC etc.
 #' @parameter prob: a vector of probabilities (or proportion of counts) in cells.
-#' @parameter prop_y: a vector of success probabilities of a binary response. Obtained from real data as the proportion of outcome equals 1.
+#' @parameter prop_y: a vector of success probabilities of binary coutcome (y). Obtained from real data as the proportion of outcome equals 1.
 #' @return simulated data for SNP1, SNP2 and associated binary outcome.
 #'
 #' @author Harun Mazumder

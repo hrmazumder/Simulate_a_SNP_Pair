@@ -1,7 +1,18 @@
-#Description: Simulation of a SNP pair and associated binary response (e.g., disease status) based on "real SNP data".
-#consider real SNP1 and SNP2 has 3 genotypes. A 3*3 plot has 9 combinations of genotypes (say, "AA-TT", "AG-AT", etc.), call "cells" and 
-#creates a multinomial problem. Finally, the counts in each cell (i.e., counts of each genotype combination of SNP1 & SNP2) is sampled from a Multinomial distribution.
-#The binary response (or disease status) is under each genotype combination  is sampled from a Burnouli distribution.
+
+#' Generate a simulated SNP data with a SNP pair and associated binary response (e.g., disease status) based on "real SNP data".
+#'
+#' @parameter snp1_name: provide SNP1 name you want to see in the simulated data
+#' @parameter snp2_name: provide SNP2 name you want to see in the simulated data
+#' @parameter sam_size: sample size of the real data (also sample size of the simulated data)
+#' @parameter size the: total number of objects that are put into cells in the typical multinomial experiment.
+                        #if size=1 in rnultinom(), it will return 0s and one 1 which is indicator of the cell is occured/picked up as result. 
+#' @parameter geno: combination of genotypes of SNP1 and SNP2, call "cells" in a Multinomial distribution. This simulation considers 3 genotypes for each SNP. 
+#' @parameter prob: a vector of probabilities (or proportion of counts) in cells.
+#' @parameter prop_y: a vector of success probabilities of a binary response. Obtained from real data as the proportion of outcome equals 1.
+#' @return simulated data for SNP1, SNP2 and associated binary outcome.
+#'
+#' @author Harun Mazumder
+
 
 #function to generate true SNP pair starts:
 
@@ -24,7 +35,7 @@ sim_true_snp = function(snp1_name, snp2_name, sam_size, size, geno, prob, prop_y
                 snp1 = sub("-.*", "", dat[,2]) 
                 snp2 = sub(".*-", "", dat[,2])
                 dat2 = data.frame(as.numeric(as.character(dat[,1])), snp1, snp2) #ensure response = dat[,1] is numerical
-                colnames(dat2) = c("response", snp1_name, snp2_name)
+                colnames(dat2) = c("outcome", snp1_name, snp2_name)
                 
                 #now randomly shuffle the observations in dat2 (optional) 
                 n =  dim(dat2)[1]
@@ -51,13 +62,13 @@ sam_size = 18000 #sample size
 #proportion in each genotype combination (or cell probabilities):
 prob = c(3641, 3864, 1075, 3242, 3485, 954, 736, 770, 233)/sam_size 
 
-#proportion of y=1 in each cell:
+#proportion of outcome=1 in each cell:
 prop_y = c(0.22, 0.22, 0.19, 0.26, 0.22, 0.21, 0.26, 0.21, 0.21)
 
 df = sim_true_snp(snp1_name="SNP1", snp2_name="SNP2", sam_size = sam_size, size=1, geno=geno, prob=prob, prop_y=prop_y)
                   
 head(df)
-      response SNP1 SNP2
+       outcome SNP1 SNP2
 14497        0   GA   AG
 5406         0   GG   AG
 17952        0   AA   GG

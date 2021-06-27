@@ -4,7 +4,7 @@ creates a multinomial problem. Finally, the counts in each cell (i.e., counts of
 The binary response (or disease status) is under each genotype combination  is sampled from a Burnouli distribution.
 
 
-An example of a SNP data:
+An example of SNP data with a pair of SNPs and associated outcome variable:
 ```
  Outcome SNP1 SNP2
         1   GA   AG

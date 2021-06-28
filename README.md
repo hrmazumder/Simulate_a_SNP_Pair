@@ -17,7 +17,7 @@ At first let us look at an example of SNP data with a pair of SNPs (_SNP1_ & _SN
         1   GG   GG
 ```
 
-Consider a pair of real SNPs, _SNP1_ and _SNP2_, and each has 3 genotypes. A 3 by 3 plot reveals 9 combinations of genotypes (say, "_AA-GG_", "_AA-GA_", etc.), call "cells". The counts in the cells create a Multinomial distribution. Let's make a 3 by 3 plot now for the given real SNP data (available at- Simulation_SNP_Pair/Data/real_snp_data.csv).
+Consider a pair of real SNPs, namely _SNP1_ and _SNP2_, and each SNP has 3 genotypes. A 3 by 3 plot reveals 9 combinations of genotypes (say, "_AA-GG_", "_AA-GA_", etc.), call "cells". The counts in the cells create a Multinomial distribution. Let's make a 3 by 3 plot now for the given real SNP data (available at- Simulation_SNP_Pair/Data/real_snp_data.csv).
 
 <p align="center">
   <img width="400" height="300" src="https://github.com/hrmazumder/Simulation_SNP_Pair/blob/main/Data/3%20by%203%20plot%20of%20SNP1%20vs%20SNP2.png">

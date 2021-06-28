@@ -1,15 +1,16 @@
 
 #' Generate a simulated SNP data (a SNP pair and associated binary outcome such as disease status) based on "real SNP data". 
-#' This simulation considers 3 genotypes for each SNP. 
+#' This simulation considers 3 genotypes for each SNP. Thus, 2 SNPs have 9 genotype combinations (call "cells" in Multinomial distribution).
+#' For example, AA-AG is a genotype combination, i.e., a cell. The counts in each cell are obtained from Multinomial distribution. 
 #'
-#' @parameter snp1_name: provide SNP1 name you want to see in the simulated data
-#' @parameter snp2_name: provide SNP2 name you want to see in the simulated data
+#' @parameter snp1_name: provide SNP1 name you want to see in the simulated data.
+#' @parameter snp2_name: provide SNP2 name you want to see in the simulated data.
 #' @parameter sam_size: sample size of the real data (also sample size of the simulated data)
 #' @parameter size the: total number of objects that are put into cells in the typical multinomial experiment.
                         #if size=1 in rnultinom(), it will return 0s and one 1 which is indicator of the cell is occured/picked up as result. 
-#' @parameter geno: a vector of combination of genotypes of SNP1 and SNP2, call "cells" in a Multinomial distribution. for example, AA-AT, AA-AC etc.
+#' @parameter geno: a vector of combination of genotypes of SNP1 and SNP2, call "cells" in a Multinomial distribution. 
 #' @parameter prob: a vector of probabilities (or proportion of counts) in cells.
-#' @parameter prop_y: a vector of success probabilities of binary coutcome (y). Obtained from real data as the proportion of outcome equals 1.
+#' @parameter prop_y: a vector of success probabilities of binary coutcome (y), i.e., each element of prop_y is proporiton of y=1 in each cell.
 #' @return simulated data for SNP1, SNP2 and associated binary outcome.
 #'
 #' @author Harun Mazumder
@@ -46,19 +47,18 @@ sim_true_snp = function(snp1_name, snp2_name, sam_size, size, geno, prob, prop_y
 #function ends
 
 #Calling the above "sim_true_snp" function:
-#First create a 3*3 plot based on the real SNP pair and real response variable (0/1).
-#Obtain counts (and proportions) under each genotype combination.
-#Obtain proportion of response variable (i.e., proportion of y=1) under each genotype combination.
+#First create a 3*3 plot using the R code in file "Simulation_SNP_Pair/Rcode/read_data_and_make_3*3_plot.R"
+#From the plot, obtain parameters of 'sim_true_snp' function- geno, sam_size, prob and prop_y.
 
 set.seed(100)
    
-#consider the following:
+#consider the following parameters obtained from a real SNP pair (SNP1 & SNP2):
 
 #genotype combinations (or cells in multinomial distribution):
 geno = c("GG-AA", "GG-AG", "GG-GG", "GA-AA", "GA-AG", "GA-GG", "AA-AA", "AA-AG", "AA-GG")  
 
 #sample size in real data
-sam_size = 18000 #sample size
+sam_size = 18000 
 
 #proportion in each genotype combination (or cell probabilities):
 prob = c(3641, 3864, 1075, 3242, 3485, 954, 736, 770, 233)/sam_size 
@@ -76,3 +76,4 @@ head(df)
 13232        0   GA   AG
 405          0   GG   AA
 5772         1   GG   AG
+

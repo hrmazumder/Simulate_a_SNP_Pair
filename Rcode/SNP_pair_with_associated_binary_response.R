@@ -6,7 +6,7 @@
 #' @parameter snp1_name: provide SNP1 name you want to see in the simulated data.
 #' @parameter snp2_name: provide SNP2 name you want to see in the simulated data.
 #' @parameter sam_size: sample size of the real data (also sample size of the simulated data)
-#' @parameter size the: total number of objects that are put into cells in the typical multinomial experiment.
+#' @parameter size : total number of objects that are put into cells in the typical multinomial experiment.
                         #if size=1 in rnultinom(), it will return 0s and one 1 which is indicator of the cell is occured/picked up as result. 
 #' @parameter geno: a vector of combination of genotypes of SNP1 and SNP2, call "cells" in a Multinomial distribution. 
 #' @parameter prob: a vector of probabilities (or proportion of counts) in cells.

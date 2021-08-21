@@ -2,7 +2,7 @@
 #Simulate a pair of SNPs and associated response (0/1) based on real SNP data 50 times.
 #Note: such simulation is necessary when a researcher is interested in calculating true positive rate in the SNP study.  
 
-source("Simulation_SNP_Pair/Rcode/SNP_pair_with_associated_binary_response.R")
+source("Simulate_a_SNP_Pair/Rcode/SNP_pair_with_associated_binary_response.R")
 
 set.seed(100)
 

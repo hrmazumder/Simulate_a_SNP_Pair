@@ -1,6 +1,6 @@
-**Introduction**
+**Simulation of a SNP pair and associated binary outcome (e.g., disease status) based on real SNP data**
 
-Simulation of a SNP pair and associated binary outcome (e.g., disease status) based on "real SNP data".
+A SNP is a single nucleotide base pair difference in the DNA sequence of an individual member of a species.
 
 At first let us look at an example of SNP data with a pair of SNPs (_SNP1_ & _SNP2_) and associated binary outcome variable (_y_) below.
 ```

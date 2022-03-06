@@ -18,7 +18,7 @@
 
 #function to generate true SNP pair starts:
 
-sim_true_snp = function(snp1_name, snp2_name, sam_size, size, geno, prob, prop_y){
+sim_true_snp = function(snp1_name, snp2_name, sam_size=1, size, geno, prob, prop_y){
 
                 samples = rmultinom(n = sam_size , size = size, prob = prob)
                 cell_cat = apply(X = samples, MARGIN = 2, FUN = function(x){which.max(x)} )

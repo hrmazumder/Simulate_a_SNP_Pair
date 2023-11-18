@@ -1,6 +1,7 @@
 **Simulation of a SNP pair and associated binary outcome (e.g., disease status) based on real SNP data**
 
-A SNP is a single nucleotide base pair difference in the DNA sequence of an individual member of a species.
+A Single Nucleotide Polymorphism (SNP) is a single nucleotide base pair difference in the DNA sequence of an individual member of a species. 
+SNPs are the common genetic variants and play a crucial role in understanding disease susceptibility and individual variations in the human genome. For example, a specific SNP genotype is associated with an increased risk of aggressive prostate cancer, and in this scenario, the SNP data includes combinations of genotypes along with disease status (yes or no).
 
 At first let us look at an example of SNP data with a pair of SNPs (_SNP1_ & _SNP2_) and associated binary outcome variable (_y_) below.
 ```

@@ -12,7 +12,7 @@ geno = c("GG-AA", "GG-AG", "GG-GG", "GA-AA", "GA-AG", "GA-GG", "AA-AA", "AA-AG",
 prob = c(3641, 3864, 1075, 3242, 3485, 954, 736, 770, 233)/sample_size 
 prop_y = c(0.22, 0.22, 0.19, 0.26, 0.22, 0.21, 0.26, 0.21, 0.21)
 
-df_list = replicate(n=no_rep, sim_true_snp( snp1_name = "SNP1", snp2_name = "SNP2", sam_size = sample_size, size=1,
+df_list = replicate(n=no_rep, sim_true_snp( snp1_name = "SNP1", snp2_name = "SNP2", sam_size = sample_size,
                                              geno=geno, prob=prob, prop_y=prop_y), simplify = FALSE )
 
 df_final <- do.call(cbind, Map(cbind, df_list))

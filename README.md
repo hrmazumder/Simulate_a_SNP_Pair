@@ -3,7 +3,7 @@
 A Single Nucleotide Polymorphism (SNP) is a single nucleotide base pair difference in the DNA sequence of an individual member of a species. 
 SNPs are the common genetic variants and play a crucial role in understanding disease susceptibility and individual variations in the human genome. For example, a specific SNP genotype is associated with an increased risk of aggressive prostate cancer, and in this scenario, the SNP data includes combinations of genotypes along with disease status (yes or no).
 
-The simulation study involving SNP data helps us evaluation of methods dedicated to detect the SNPs or SNP-SNP interactions that are associated with certain diseases. This illustration outlines a procedure for simulating SNPs, either based on real SNP data or tailored to the researcher's specific biological scenario of interest.
+The simulation study involving SNP data helps us evaluate the methods dedicated to detect the SNPs or SNP-SNP interactions that are associated with certain diseases. This illustration outlines a procedure for simulating SNPs, either based on real SNP data or tailored to the researcher's specific biological scenario of interest.
 
 At first let us look at an example of SNP data with a pair of SNPs (_SNP1_ & _SNP2_) and associated binary outcome variable (_y_) below.
 ```
